@@ -6,8 +6,10 @@ public class BulletInfo : MonoBehaviour
 {
     public GameObject m_bulletPrfab;
     public GameObject m_parent;
+    public Transform m_bullettargetDiection;
     public float m_timeAfterDestroy;
-    public int Speed;
-    public int m_bulletShootTime;
-   public bool m_oneTimeSpawn;
+    public float m_bulletSpeed;
+    public float m_bulletShootTime;
+    public bool m_oneTimeSpawn;
+ //   public int m_bulletCount;
 }

@@ -1,66 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1151283223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1151283224}
-  - component: {fileID: 1151283226}
-  - component: {fileID: 1151283225}
-  m_Layer: 0
-  m_Name: Firepoint1
-  m_TagString: Enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1151283224
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151283223}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.004, y: 0.049, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8281141624640080813}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1151283226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151283223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91383da6883678742a88519b4d909818, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_bulletPrfab: {fileID: 1235256354532094784, guid: 4b0ff418e7919e0459c824fdccd9b5db,
-    type: 3}
-  m_parent: {fileID: 6052870267031436114}
-  m_timeAfterDestroy: 4
-  Speed: 50
---- !u!114 &1151283225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151283223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 918390e7b0d02f343810d3c99853ab3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &697291715087134141
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +11,7 @@ GameObject:
   - component: {fileID: 3679681025695369415}
   - component: {fileID: 1922112092498264027}
   - component: {fileID: 1448129412889067598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: kuyruk_kanat.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +90,7 @@ GameObject:
   - component: {fileID: 3125645933897528995}
   - component: {fileID: 3104911974218542641}
   - component: {fileID: 8501931299913784675}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: govde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +169,7 @@ GameObject:
   - component: {fileID: 2352798489324079498}
   - component: {fileID: 3855865028001197542}
   - component: {fileID: 8825836555628625150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hava_giris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +248,7 @@ GameObject:
   - component: {fileID: 8793468448454943992}
   - component: {fileID: 8842400062187103360}
   - component: {fileID: 553151527759007538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: kuyruk_kanat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +327,7 @@ GameObject:
   - component: {fileID: 2735736077014444699}
   - component: {fileID: 5804671751040622775}
   - component: {fileID: 6880593430533191862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: kanat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8922705667337767386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +436,7 @@ GameObject:
   - component: {fileID: 5353378685852529688}
   - component: {fileID: 8515553099931552649}
   - component: {fileID: 3612164385783163752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: burun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +515,7 @@ GameObject:
   - component: {fileID: 7424200278476278891}
   - component: {fileID: 1345130524826217510}
   - component: {fileID: 5932592998884338689}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: kanat.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3052350126917350026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: on
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -683,7 +622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9112797564480923995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyMeshData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8281141624640080813}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fiirepointhandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,8 +681,7 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0.694}
   m_LocalScale: {x: 5, y: 5, z: 5}
-  m_Children:
-  - {fileID: 1151283224}
+  m_Children: []
   m_Father: {fileID: 5822489638238619171}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -756,7 +694,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4889556067118859141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: yan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +726,7 @@ GameObject:
   - component: {fileID: 1873425826462688925}
   - component: {fileID: 4510033305809566611}
   - component: {fileID: 595192793280387192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hava_giris.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,7 +805,9 @@ GameObject:
   - component: {fileID: 5822489638238619171}
   - component: {fileID: 657164567}
   - component: {fileID: 657164566}
-  m_Layer: 0
+  - component: {fileID: -3134386723507542093}
+  - component: {fileID: -3700146614117596669}
+  m_Layer: 8
   m_Name: Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +821,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7392371415490360368}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
@@ -889,7 +829,7 @@ Transform:
   - {fileID: 8281141624640080813}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &657164567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -916,6 +856,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999998, y: 1, z: 4.562623}
   m_Center: {x: -0, y: 3.7700928e-16, z: -1.7424043}
+--- !u!114 &-3134386723507542093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7392371415490360368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9607dcce3985af478daaf4c8666f4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3700146614117596669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7392371415490360368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c57e4813654184b9d5080a1dd6e638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8129407869258876404
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +891,7 @@ GameObject:
   - component: {fileID: 2165197992133445007}
   - component: {fileID: 1451243813137995468}
   - component: {fileID: 3533285797451165713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}

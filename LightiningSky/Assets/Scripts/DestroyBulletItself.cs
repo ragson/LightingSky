@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyObject : MonoBehaviour, IDestoy
+public class DestroyBulletItself : MonoBehaviour, IDestoy
 {
     [HideInInspector]
     public float m_timeAfterDestroy;
