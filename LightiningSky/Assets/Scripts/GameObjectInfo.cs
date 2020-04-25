@@ -9,6 +9,7 @@ public class GameObjectInfo : MonoBehaviour
 
 
     public Transform[] m_points;
+    public Transform[] m_pathPoints;
     public GameObject[] m_movingObects;
     public int[] m_speeds;
     public bool m_applyOperator;

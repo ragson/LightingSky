@@ -4,17 +4,10 @@ using UnityEngine;
 using System.Reflection;
 using System;
 
-public class Level1Script : MonoBehaviour/*,ILevel*/
+public class Level1Script : MonoBehaviour,ILevel
 {
     public GameObjectInfo m_1stWaveObjinfo, m_2ndWaveObjInfo, m_3rdWaveObjInfo, m_4thWaveObjInfo,
-                         m_5thWaveObjInfo, m_6thWaveObjInfo;
-
-
-
-    private void Start()
-    {
-
-    }
+                         m_5thWaveObjInfo;
 
     public IEnumerator MoveLerp(GameObjectInfo gameObjectInfo)
     {
@@ -34,12 +27,15 @@ public class Level1Script : MonoBehaviour/*,ILevel*/
         }
     }
 
+    void Awake()
+    {
+        Globals.Level = "Level1";
+    }
+
+
     private void Update()
     {
-
-
         StartCoroutine(MoveObject());
-
     }
 
     IEnumerator MoveQudaratic()
@@ -60,9 +56,9 @@ public class Level1Script : MonoBehaviour/*,ILevel*/
         }
     }
     int objcnt = 0;
-    public IEnumerator MoveObjectRandomly()
+    public IEnumerator StatObjectRandomly()
     {
-        if (objcnt < 10)
+        if (objcnt < m_2ndWaveObjInfo.m_movingObjsCnt)
         {
             if (!m_2ndWaveObjInfo.m_oneTimeInstiate)
             {
@@ -82,10 +78,10 @@ public class Level1Script : MonoBehaviour/*,ILevel*/
                 GameObject moveobj = Instantiate(selectedobj, mytransform.position, Quaternion.Euler(angle));
                 moveobj.AddComponent<MovingScript>();
                 moveobj.GetComponent<MovingScript>().speed = speed;
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(1f);
                 m_2ndWaveObjInfo.m_oneTimeInstiate = false;
                 objcnt++;
-                if (objcnt == 10)
+                if (objcnt == m_2ndWaveObjInfo.m_movingObjsCnt)
                 {
                     m_2ndWaveObjInfo.m_oneTimeInstiate = true;
                 }
@@ -98,28 +94,12 @@ public class Level1Script : MonoBehaviour/*,ILevel*/
     {
         StartCoroutine(MoveQudaratic());
         yield return new WaitUntil(() => m_1stWaveObjinfo.m_tempObjCnt == 6);
-        StartCoroutine(MoveObjectRandomly());
-        yield return new WaitUntil(() => objcnt == 10);
+        StartCoroutine(StatObjectRandomly());
+        yield return new WaitUntil(() => objcnt == m_2ndWaveObjInfo.m_movingObjsCnt);
         StartCoroutine(MoveLerp(m_3rdWaveObjInfo));
         StartCoroutine(MoveLerp(m_4thWaveObjInfo));
         yield return new WaitUntil(() => Globals.Enemy4DstrCnt == 2);
         StartCoroutine(MoveLerp(m_5thWaveObjInfo));
-
-        //    //if (Globals.EnemyDestroyCnt < 15)
-        //    {
-        //        
-
-
-        //    }
-        //    //else if (Globals.EnemyDestroyCnt > 14 && Globals.EnemyDestroyCnt < 17)
-        //    {
-        //        StartCoroutine(MoveLerp(m_4thWaveObjInfo,2f));
-        //        StartCoroutine(MoveLerp(m_5thWaveObjInfo,3f));
-        //    }
-        //   // else if (Globals.EnemyDestroyCnt > 16)
-        //        StartCoroutine(MoveLerp(m_6thWaveObjInfo,2f));
-
-
     }
 }
 

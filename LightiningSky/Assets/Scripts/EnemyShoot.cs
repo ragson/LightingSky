@@ -12,7 +12,7 @@ public class EnemyShoot : MonoBehaviour, ShootingInteface
     }
 
     int m_tempCnt = 0;
-
+    Vector3 direction;
     public IEnumerator Shoot()
     {
 
@@ -26,7 +26,8 @@ public class EnemyShoot : MonoBehaviour, ShootingInteface
                 bullet.GetComponent<DestroyBulletItself>().m_timeAfterDestroy = bulletInfo.m_timeAfterDestroy;
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();
                 //  Vector3 direction = this.transform.up;
-                Vector3 direction = /*bulletInfo.m_bullettargetDiection*/GameObject.Find("Player").transform.position - this.transform.position;
+                if (GameObject.Find("Player") != null)
+                    direction = /*bulletInfo.m_bullettargetDiection*/GameObject.Find("Player").transform.position - this.transform.position;
                 rb.AddForce(direction * bulletInfo.m_bulletSpeed, ForceMode.Impulse);
                 // rb.velocity = bullet.transform.up * bulletInfo.m_bulletSpeed;
                 yield return new WaitForSeconds(bulletInfo.m_bulletShootTime);

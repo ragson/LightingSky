@@ -8,6 +8,7 @@ public class Globals : MonoBehaviour
     public static int EnemyDestroyCnt;
     public static int Enemy4DstrCnt;
     public static int bosslesslevedstryCnt;
+    public static string Level;
 
     private void Awake()
     {
@@ -24,5 +25,6 @@ public class Globals : MonoBehaviour
         Physics.IgnoreLayerCollision(8, 9);
         Physics.IgnoreLayerCollision(9, 10);
         Physics.IgnoreLayerCollision(9, 9);
+        Physics.IgnoreLayerCollision(10, 10);
     }
 }
