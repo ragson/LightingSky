@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 111106061}
   - component: {fileID: 111106062}
   - component: {fileID: 111106063}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint2
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 707536010}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdirection
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 775256846}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdirection2
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 876428571}
   - component: {fileID: 876428572}
   - component: {fileID: 876428573}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint 3
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 924203331}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdiection1
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 1164010489}
   - component: {fileID: 1164010490}
   - component: {fileID: 1164010491}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint (1)
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 1275572302}
   - component: {fileID: 1275572303}
   - component: {fileID: 1275572304}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1881071532}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdirection3
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 5194098024288889086}
   - component: {fileID: 2581610798593504764}
   - component: {fileID: 552655936145309302}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint3
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 3633296379927563613}
   - component: {fileID: 2002266413763839258}
   - component: {fileID: 5398278677680688446}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdirection3
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8632445002101838052}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Playermesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 1861258072361466173}
   - component: {fileID: 5957337640284037132}
   - component: {fileID: 721757887061562360}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube.000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 6551417059358906408}
   - component: {fileID: 6368500156742186448}
   - component: {fileID: 1048220375162839087}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint2
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 8512552974236421129}
   - component: {fileID: 1027860854297598434}
   - component: {fileID: 1619428232660324666}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdiection4
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -882,7 +882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5306658858294621221}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePointHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +920,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7769352158608778540}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePointHandler2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +966,7 @@ GameObject:
   - component: {fileID: 7515760494555813094}
   - component: {fileID: 8139122944522407754}
   - component: {fileID: 2101189552677920337}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint4
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 2720435880693783080}
   - component: {fileID: 1904281571013153696}
   - component: {fileID: 3100456279637336965}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdirection5
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 7204954394940760962}
   - component: {fileID: 3962919031940814390}
   - component: {fileID: 1703736270041449410}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1255,7 +1255,9 @@ GameObject:
   - component: {fileID: 2040264813}
   - component: {fileID: 2040264814}
   - component: {fileID: 452089874}
-  m_Layer: 0
+  - component: {fileID: 452089876}
+  - component: {fileID: 452089871}
+  m_Layer: 11
   m_Name: Player
   m_TagString: Draggable
   m_Icon: {fileID: 0}
@@ -1290,8 +1292,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.11702, y: 1, z: 1.1919132}
-  m_Center: {x: -0.031461716, y: -5.79141e-16, z: -0.5407533}
+  m_Size: {x: 9.11702, y: 1, z: 4.3849726}
+  m_Center: {x: -0.031461716, y: -1.3069058e-14, z: -2.1372826}
 --- !u!65 &2040264813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1303,8 +1305,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2791791, y: 1, z: 9.903561}
-  m_Center: {x: -0.018292904, y: 2.716079e-16, z: 0.5191126}
+  m_Size: {x: 2.1077993, y: 1, z: 9.903561}
+  m_Center: {x: 0.13619736, y: 2.9214742e-15, z: 0.51911265}
 --- !u!114 &2040264814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,6 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3646c58f63a056247978cf8e0b84ec5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  linkedObject: {fileID: 0}
 --- !u!114 &452089874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,6 +1332,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9607dcce3985af478daaf4c8666f4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &452089876
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659324444742842053}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 32
+  m_CollisionDetection: 0
+--- !u!114 &452089871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659324444742842053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab59c4a0cac62847a42f48c7e477a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_normalShooting: {fileID: 5235352805260476706}
+  m_powerShooting: {fileID: 5570187254692193265}
 --- !u!1 &7756819284500194058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1373,7 @@ GameObject:
   - component: {fileID: 3666278025289504759}
   - component: {fileID: 4170620210053767284}
   - component: {fileID: 5701120154271973682}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdiretion2
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -1421,7 +1454,7 @@ GameObject:
   - component: {fileID: 2566135955889844302}
   - component: {fileID: 1365798728449544382}
   - component: {fileID: 5908419197126878220}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint5
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -1534,7 +1567,7 @@ GameObject:
   - component: {fileID: 9184842013600912512}
   - component: {fileID: 1420018350500205345}
   - component: {fileID: 1378351624547221024}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -1647,7 +1680,7 @@ GameObject:
   - component: {fileID: 8749984073068873184}
   - component: {fileID: 2595459879142991279}
   - component: {fileID: 3890904620775338489}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FirePoint1
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -1758,7 +1791,7 @@ GameObject:
   - component: {fileID: 4104726304890613696}
   - component: {fileID: 2830935608827681781}
   - component: {fileID: 6227783690059732398}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdirection
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -1837,7 +1870,7 @@ GameObject:
   - component: {fileID: 1097763840055960331}
   - component: {fileID: 506709123252774825}
   - component: {fileID: 7641637356060671611}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trdiection1
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}

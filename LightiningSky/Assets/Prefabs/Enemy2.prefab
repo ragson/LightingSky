@@ -50,7 +50,7 @@ MonoBehaviour:
   m_bullettargetDiection: {fileID: 6633866952715142358, guid: 9eac908b87389744998bdb090808893b,
     type: 3}
   m_timeAfterDestroy: 4
-  m_bulletSpeed: 0.5
+  m_bulletSpeed: 0.6
   m_bulletShootTime: 4
   m_oneTimeSpawn: 0
 --- !u!114 &1017207553

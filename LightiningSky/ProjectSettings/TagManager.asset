@@ -20,8 +20,8 @@ TagManager:
   - Enemy
   - EnemyBullet
   - playerbullet
-  - 
-  - 
+  - Player
+  - Coin
   - 
   - 
   - 

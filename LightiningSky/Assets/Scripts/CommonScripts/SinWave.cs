@@ -15,7 +15,7 @@ public class SinWave : MonoBehaviour
 
     void Update()
     {
-       transform.position = _startPosition + new Vector3(Mathf.Sin(Time.time), 0.0f, 0.0f);
+       transform.position = _startPosition + new Vector3(Mathf.Sin(Time.time)*5, transform.position.y, transform.position.z);
         
     }
 }

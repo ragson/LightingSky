@@ -6,9 +6,11 @@ public class Globals : MonoBehaviour
 {
     public static Globals m_globals;
     public static int EnemyDestroyCnt;
-    public static int Enemy4DstrCnt;
+    public static List<GameObject> enemy4List;
     public static int bosslesslevedstryCnt;
     public static string Level;
+    public static int m_coinscore;
+    public static GameObject m_currentLvl;
 
     private void Awake()
     {
@@ -26,5 +28,9 @@ public class Globals : MonoBehaviour
         Physics.IgnoreLayerCollision(9, 10);
         Physics.IgnoreLayerCollision(9, 9);
         Physics.IgnoreLayerCollision(10, 10);
+        Physics.IgnoreLayerCollision(10, 11);
+        Physics.IgnoreLayerCollision(8, 12);
+        Physics.IgnoreLayerCollision(9, 12);
+        Physics.IgnoreLayerCollision(10, 12);
     }
 }
