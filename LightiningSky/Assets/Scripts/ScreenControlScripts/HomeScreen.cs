@@ -13,6 +13,7 @@ public class HomeScreen : MonoBehaviour
     private void OnEnable()
     {
         //Set player saved score on home page 
+        Globals.m_coinscore = 0;
         if (PlayerPrefs.GetInt("Score") != 0)
         {
             m_homeScreenTxt.text = "Score " + PlayerPrefs.GetInt("Score").ToString();

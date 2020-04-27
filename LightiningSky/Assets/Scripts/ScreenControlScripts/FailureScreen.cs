@@ -19,7 +19,7 @@ public class FailureScreen : MonoBehaviour
         if (PlayerPrefs.GetInt("Score") != 0)
             score = PlayerPrefs.GetInt("Score");
 
-        
+        GameObject.Find("MyScore").GetComponent<Text>().text = "";
         //LevelController
         GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = false;
 

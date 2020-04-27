@@ -19,7 +19,7 @@ public class SuccessScreen : MonoBehaviour
         }
 
         GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = false;
-       
+        GameObject.Find("MyScore").GetComponent<Text>().text = "";
         GameObject.Find("GameView").transform.position = new Vector3(80, 80, 80);
         m_player.SetActive(false);
         m_winEffect.SetActive(true);

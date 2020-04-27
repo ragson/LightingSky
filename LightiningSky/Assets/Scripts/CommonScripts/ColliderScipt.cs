@@ -23,9 +23,10 @@ public class ColliderScipt : MonoBehaviour
 
             m_healthbar.value -= 1;
 
+           
+
             if (m_healthbar.value == 0)
             {
-
                 AudioSource audioSource = GameObject.Find("GainObjects").GetComponent<AudioSource>();
                 audioSource.PlayOneShot(GameObject.Find("GainObjects").GetComponent<GainObjectController>().m_explosionClip);
 
@@ -44,6 +45,8 @@ public class ColliderScipt : MonoBehaviour
                 if (collision.collider.name.Contains("BossEnemyHolder"))//after Boss Enemy Plane Success screen displayed
                 {
                     int pastscore = 0;
+
+                    
                     StopAllCoroutines();
                     Destroy(collision.collider.gameObject);
                     if (PlayerPrefs.GetInt("Score") != 0)

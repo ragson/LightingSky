@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TriggerEnter : MonoBehaviour
 {
@@ -13,9 +14,10 @@ public class TriggerEnter : MonoBehaviour
         {
             if (other.name == "Player")
             {
+
                 
                 Globals.m_coinscore++;
-                
+                GameObject.Find("MyScore").GetComponent<Text>().text = Globals.m_coinscore.ToString();
                 Destroy(transform.gameObject);
             }
         }      
