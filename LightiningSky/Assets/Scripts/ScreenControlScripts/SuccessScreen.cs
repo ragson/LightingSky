@@ -12,11 +12,19 @@ public class SuccessScreen : MonoBehaviour
 
     private void OnEnable()
     {
+        int score = 0;
+        if (PlayerPrefs.GetInt("Score") != 0)
+            score = PlayerPrefs.GetInt("Score");
+
+        score = Globals.m_coinscore + score;
+        PlayerPrefs.SetInt("Score", score);
 
         if (PlayerPrefs.GetInt("Score") != 0)
         {
             m_successTxt.text = "Score " + PlayerPrefs.GetInt("Score").ToString();
         }
+
+        //PlayerPrefs.SetInt("Score", Globals.m_coinscore);
 
         GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = false;
         GameObject.Find("MyScore").GetComponent<Text>().text = "";
@@ -39,6 +47,8 @@ public class SuccessScreen : MonoBehaviour
         m_homeScreen.SetActive(true);
         this.gameObject.SetActive(false);
         m_player.SetActive(true);
+
+        Globals.m_coinscore = 0;
         GameObject.Find("PlayerHealthbar").GetComponent<Slider>().value = 100;
        // GameObject.Find("GameView").transform.position = new Vector3(0, 0, 43);
         PlayerShooting[] playerShootings = m_player.GetComponentsInChildren<PlayerShooting>();

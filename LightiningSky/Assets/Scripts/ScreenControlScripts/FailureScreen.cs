@@ -14,10 +14,18 @@ public class FailureScreen : MonoBehaviour
     private void OnEnable()
     {
         
+
         Time.timeScale = 0;
+
+        
 
         if (PlayerPrefs.GetInt("Score") != 0)
             score = PlayerPrefs.GetInt("Score");
+
+        score = Globals.m_coinscore + score;
+        PlayerPrefs.SetInt("Score", score);
+
+
 
         GameObject.Find("MyScore").GetComponent<Text>().text = "";
         //LevelController
@@ -45,8 +53,8 @@ public class FailureScreen : MonoBehaviour
     public void GoHome()
     {
         Time.timeScale = 1;
-        
-       
+
+        Globals.m_coinscore = 0;
         m_homeSceen.SetActive(true);
         m_player.SetActive(true);
         GameObject.Find("PlayerHealthbar").GetComponent<Slider>().value = 100;
@@ -88,13 +96,14 @@ public class FailureScreen : MonoBehaviour
         {
             playerShooting.Start();
         }
-
+        Globals.m_coinscore = 0;
         GameObject.Find("PlayerHealthbar").GetComponent<Slider>().value = 100;
         GameObject.Find("GameView").transform.position = new Vector3(0, 0, 0);
         if (Globals.m_currentLvl != null)
         {
 
             Globals.m_currentLvl.GetComponent<LevelScript>().Start();
+            
             GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = true;
             
             Globals.m_currentLvl.GetComponent<LevelScript>().m_1stWaveObjinfo.m_oneTimeInstiate = false;
@@ -118,7 +127,7 @@ public class FailureScreen : MonoBehaviour
        
         m_player.SetActive(true);
 
-
+        Globals.m_coinscore = 0;
         PlayerShooting[] playerShootings = m_player.GetComponentsInChildren<PlayerShooting>();
         foreach (PlayerShooting playerShooting in playerShootings)
         {
