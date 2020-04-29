@@ -8859,6 +8859,7 @@ MonoBehaviour:
   - {fileID: 195666748}
   - {fileID: 692483130}
   m_levelScreenPage: {fileID: 1161689680}
+  m_player: {fileID: 452089870}
 --- !u!4 &911561419
 Transform:
   m_ObjectHideFlags: 0

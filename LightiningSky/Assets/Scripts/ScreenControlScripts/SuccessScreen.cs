@@ -48,7 +48,7 @@ public class SuccessScreen : MonoBehaviour
     {
         m_homeScreen.SetActive(true);
         this.gameObject.SetActive(false);
-        m_player.SetActive(true);
+       // m_player.SetActive(true);
        // m_intoPLAYER.transform.position = new Vector3(-2, -145, -320);
         Globals.m_coinscore = 0;
         GameObject.Find("PlayerHealthbar").GetComponent<Slider>().value = 100;

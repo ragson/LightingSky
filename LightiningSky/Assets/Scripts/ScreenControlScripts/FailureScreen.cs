@@ -18,7 +18,7 @@ public class FailureScreen : MonoBehaviour
 
         Time.timeScale = 0;
 
-        
+        m_player.SetActive(false);
 
         if (PlayerPrefs.GetInt("Score") != 0)
             score = PlayerPrefs.GetInt("Score");
@@ -60,7 +60,7 @@ public class FailureScreen : MonoBehaviour
 
         Globals.m_coinscore = 0;
         m_homeSceen.SetActive(true);
-        m_player.SetActive(true);
+       // m_player.SetActive(true);
         GameObject.Find("PlayerHealthbar").GetComponent<Slider>().value = 100;
         GameObject.Find("GameView").transform.position = new Vector3(80, 80, 80);
         PlayerShooting[] playerShootings = m_player.GetComponentsInChildren<PlayerShooting>();

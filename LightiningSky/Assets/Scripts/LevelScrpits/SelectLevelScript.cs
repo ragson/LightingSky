@@ -18,7 +18,10 @@ public class SelectLevelScript : MonoBehaviour
 
     public void Selectlevel(int lvlno)
     {
+
+       
         LevelObjects levelObjects = GameObject.Find("AllLevelObjects").GetComponent<LevelObjects>();
+        levelObjects.m_player.SetActive(true);
         levelObjects.m_levelScreenPage.SetActive(false);
         if (!levelObjects.m_gameView.activeSelf)
             levelObjects.m_gameView.SetActive(true);
