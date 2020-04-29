@@ -5032,12 +5032,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39695111}
   m_CullTransparentMesh: 0
---- !u!1 &63344639 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5570187254692193265, guid: 9eac908b87389744998bdb090808893b,
-    type: 3}
-  m_PrefabInstance: {fileID: 793546471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &66674808
 GameObject:
   m_ObjectHideFlags: 0
@@ -5279,12 +5273,6 @@ Transform:
   m_Father: {fileID: 1780529615}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &153419638 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5235352805260476706, guid: 9eac908b87389744998bdb090808893b,
-    type: 3}
-  m_PrefabInstance: {fileID: 793546471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &163284376
 GameObject:
   m_ObjectHideFlags: 0
@@ -7330,6 +7318,12 @@ MonoBehaviour:
   m_homeScreen: {fileID: 1399929119}
   m_winEffect: {fileID: 1301476872}
   m_player: {fileID: 452089870}
+  lvl1: {fileID: 1998152388}
+  lvl2: {fileID: 184995991}
+  lvl3: {fileID: 2122827934}
+  lvl4: {fileID: 1505723635}
+  lvl5: {fileID: 1401908156}
+  m_intoPLAYER: {fileID: 1802805517}
 --- !u!1 &611421152
 GameObject:
   m_ObjectHideFlags: 0
@@ -8429,7 +8423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2040264814, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 452089874, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 452089871, guid: 9eac908b87389744998bdb090808893b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9eac908b87389744998bdb090808893b, type: 3}
 --- !u!1 &828140249
 GameObject:
@@ -8825,6 +8822,57 @@ MonoBehaviour:
   m_tempObjCnt: 0
   m_oneTimeInstiate: 0
   m_tempobjecttomove: {fileID: 0}
+--- !u!1 &911561417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911561419}
+  - component: {fileID: 911561418}
+  m_Layer: 0
+  m_Name: AllLevelObjects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &911561418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911561417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1285c8f03ddc44d40b7ad11f8080dc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gameView: {fileID: 1762976148}
+  m_levelsObjArr:
+  - {fileID: 876981219}
+  - {fileID: 1205522639}
+  - {fileID: 1514235818}
+  - {fileID: 195666748}
+  - {fileID: 692483130}
+  m_levelScreenPage: {fileID: 1161689680}
+--- !u!4 &911561419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911561417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &918390473
 GameObject:
   m_ObjectHideFlags: 0
@@ -9114,6 +9162,11 @@ MonoBehaviour:
   m_playButton: {fileID: 1902992437}
   m_player: {fileID: 452089870}
   m_instuctTxt: {fileID: 1514358216}
+  lvl1: {fileID: 1998152388}
+  lvl2: {fileID: 184995991}
+  lvl3: {fileID: 2122827934}
+  lvl4: {fileID: 1505723635}
+  lvl5: {fileID: 1401908156}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -15913,14 +15966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c310d3d60a8624db1b6070513c7c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_gameView: {fileID: 1762976148}
-  m_levelsObjArr:
-  - {fileID: 876981219}
-  - {fileID: 1205522639}
-  - {fileID: 1514235818}
-  - {fileID: 195666748}
-  - {fileID: 692483130}
-  m_levelScreenPage: {fileID: 1161689680}
 --- !u!4 &1381479791
 Transform:
   m_ObjectHideFlags: 0
@@ -17260,7 +17305,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 900, y: 1600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -18147,20 +18192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedUpDown: 3
   distanceUpDown: 3
---- !u!114 &1802805520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802805517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ab59c4a0cac62847a42f48c7e477a56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_normalShooting: {fileID: 153419638}
-  m_powerShooting: {fileID: 63344639}
 --- !u!54 &1802805521
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18727,7 +18758,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950278055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.50413, y: -17.5752, z: -9.8}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1578464781}
@@ -18741,6 +18772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1762976149}
     m_Modifications:
+    - target: {fileID: 452089871, guid: 9eac908b87389744998bdb090808893b, type: 3}
+      propertyPath: m_powerButton
+      value: 
+      objectReference: {fileID: 533545759}
     - target: {fileID: 6633866952715142358, guid: 9eac908b87389744998bdb090808893b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18816,7 +18851,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1420018350500205345, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 1027860854297598434, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 6368500156742186448, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 2595459879142991279, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 2830935608827681781, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 4170620210053767284, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 2002266413763839258, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 8139122944522407754, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 1904281571013153696, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 2581610798593504764, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 506709123252774825, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 1365798728449544382, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 1378351624547221024, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 1619428232660324666, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 1048220375162839087, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 3890904620775338489, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 6227783690059732398, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 5701120154271973682, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 5398278677680688446, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 2101189552677920337, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 3100456279637336965, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 552655936145309302, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 7641637356060671611, guid: 9eac908b87389744998bdb090808893b, type: 3}
+    - {fileID: 5908419197126878220, guid: 9eac908b87389744998bdb090808893b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9eac908b87389744998bdb090808893b, type: 3}
 --- !u!1 &1980160958
 GameObject:

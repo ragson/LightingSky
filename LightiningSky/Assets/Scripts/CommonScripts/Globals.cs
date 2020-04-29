@@ -10,7 +10,8 @@ public class Globals : MonoBehaviour
     public static int bosslesslevedstryCnt;
     public static string Level;
     public static int m_coinscore;
-    public static GameObject m_currentLvl;
+    public static GameObject m_commonLvl;
+    public static ILevel m_currentLvl;
 
     private void Awake()
     {

@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class Level2Script : LevelScript,ILevel
 {
+ 
     //moveobject method call Enemy war waves diffeent positions .
     public IEnumerator MoveObject()
     {
@@ -18,5 +19,10 @@ public class Level2Script : LevelScript,ILevel
         StartCoroutine(MoveLerp(m_4thWaveObjInfo));
         yield return new WaitUntil(() => Globals.enemy4List.Count == 0);
         StartCoroutine(MoveLerp(m_5thWaveObjInfo));
+    }
+
+    public void StopMoveObject()
+    {
+        StopCoroutine(MoveObject());
     }
 }

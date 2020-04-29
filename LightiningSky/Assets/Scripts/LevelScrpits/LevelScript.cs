@@ -38,20 +38,14 @@ public class LevelScript : MonoBehaviour
         }
     }
 
-    void Awake()
-    {
-
-    }
+    
 
     public void Start()
     {
-        Globals.m_currentLvl = this.gameObject;
 
-
+        Globals.m_commonLvl = this.gameObject;
         objcnt = 0;
         Globals.enemy4List = new List<GameObject>();
-
-        
 
         foreach (Transform tran in m_1stWaveObjinfo.m_parent.transform)
         {
@@ -67,8 +61,6 @@ public class LevelScript : MonoBehaviour
             {
                 Destroy(tran.gameObject);
             }
-
-
         }
 
         foreach (Transform tran in m_2ndWaveObjInfo.m_parent.transform)
@@ -103,7 +95,7 @@ public class LevelScript : MonoBehaviour
             }
         }
     }
-
+    
     public IEnumerator MoveQudaratic()
     {
         if (!m_1stWaveObjinfo.m_oneTimeInstiate)
@@ -182,7 +174,6 @@ public class LevelScript : MonoBehaviour
 
     }
 
-
     public IEnumerator MoveObjectRandomly(GameObjectInfo gameObjectInfo)
     {
         if (!gameObjectInfo.m_oneTimeInstiate)
@@ -210,5 +201,7 @@ public class LevelScript : MonoBehaviour
 
 public interface ILevel
 {
+    //void Start();
+    //void CurrentObject();
     IEnumerator MoveObject();
 }

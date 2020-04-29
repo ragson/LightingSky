@@ -16,4 +16,9 @@ public class Level5Script : LevelScript,ILevel
         yield return new WaitUntil(() => Globals.enemy4List.Count == 0);
         StartCoroutine(MoveLerp(m_5thWaveObjInfo));
     }
+
+    public void StopMoveObject()
+    {
+        StopCoroutine(MoveObject());
+    }
 }

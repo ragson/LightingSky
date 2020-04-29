@@ -23,15 +23,18 @@ public class ColliderScipt : MonoBehaviour
 
             m_healthbar.value -= 1;
 
-           
+
 
             if (m_healthbar.value == 0)
             {
                 AudioSource audioSource = GameObject.Find("GainObjects").GetComponent<AudioSource>();
                 audioSource.PlayOneShot(GameObject.Find("GainObjects").GetComponent<GainObjectController>().m_explosionClip);
+                Expolsion(collision);
 
-                GameObject explosion = Instantiate(GameObject.Find("GainObjects").GetComponent<GainObjectController>().m_explosion, collision.collider.transform.position, Quaternion.identity);
+
+                //  GameObject explosion = Instantiate(GameObject.Find("GainObjects").GetComponent<GainObjectController>().m_explosion, collision.collider.transform.position, Quaternion.identity);
                 GameObject m_coin = Instantiate(GameObject.Find("GainObjects").GetComponent<GainObjectController>().m_coinPrefab, collision.collider.transform.position, Quaternion.identity);
+                m_coin.AddComponent<DestoyAfterCross>();
                 if (collision.collider.name.Contains("Enemy4"))
                 {
                     if (Globals.enemy4List.Count > 0)
@@ -46,8 +49,8 @@ public class ColliderScipt : MonoBehaviour
                 {
                     int pastscore = 0;
 
-                    
-                    StopAllCoroutines();
+
+                    // StopAllCoroutines();
                     Destroy(collision.collider.gameObject);
                     if (PlayerPrefs.GetInt("Score") != 0)
                         pastscore = PlayerPrefs.GetInt("Score");
@@ -56,16 +59,11 @@ public class ColliderScipt : MonoBehaviour
                         PlayerPrefs.SetInt("Score", Globals.m_coinscore);
                     else
                         PlayerPrefs.SetInt("Score", pastscore);
+                    //  StartCoroutine(Expolsion(collision, "success"));
+
+                    //
 
                     GameObject.Find("ScreenController").GetComponent<SceenControl>().m_successScreenPage.SetActive(true);
-
-                    //game view and alllevel pages  make inactive 
-                    //GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = false;
-                    //GameObject.Find("LevelController").GetComponent<SelectLevelScript>().m_gameView.SetActive(false);
-                    //foreach (GameObject lvlobj in GameObject.Find("LevelController").GetComponent<SelectLevelScript>().m_levelsObjArr)
-                    //{
-                    //    lvlobj.SetActive(false);
-                    //}
                 }
                 else
                 {
@@ -82,7 +80,7 @@ public class ColliderScipt : MonoBehaviour
             if (GameObject.Find("PlayerHealthbar").GetComponent<Slider>().value == 0)
             {
                 // Destroy(collision.collider.gameObject);
-                GameObject explosion = Instantiate(GameObject.Find("GainObjects").GetComponent<GainObjectController>().m_explosion, collision.collider.transform.position, Quaternion.identity);
+
 
                 AudioSource audioSource = GameObject.Find("GainObjects").GetComponent<AudioSource>();
                 audioSource.PlayOneShot(GameObject.Find("GainObjects").GetComponent<GainObjectController>().m_explosionClip);
@@ -97,8 +95,10 @@ public class ColliderScipt : MonoBehaviour
                 else
                     PlayerPrefs.SetInt("Score", pastscore);
 
+               // StartCoroutine(Failue());
+                //  StartCoroutine(Expolsion(collision, "failure"));
+                //  
                 GameObject.Find("ScreenController").GetComponent<SceenControl>().m_failureScreen.SetActive(true);
-               
             }
 
         }
@@ -109,4 +109,10 @@ public class ColliderScipt : MonoBehaviour
         }
     }
 
+    public void Expolsion(Collision collision)
+    {
+        GameObject explosion = Instantiate(GameObject.Find("GainObjects").GetComponent<GainObjectController>().m_explosion, collision.collider.transform.position, Quaternion.identity);
+        explosion.AddComponent<DestroyBulletItself>();
+        explosion.GetComponent<DestroyBulletItself>().m_timeAfterDestroy = 0.5f;
+    }
 }

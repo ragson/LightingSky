@@ -29,13 +29,13 @@ public class DragObject : MonoBehaviour
             if (Input.GetMouseButton(0)) // 0 for left and 1 for right click
             {
                 curPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                transform.position = new Vector2(curPosition.x, transform.position.y);
+                transform.position = new Vector2(curPosition.x, curPosition.y);
             }
 
             if (Input.GetMouseButtonUp(0)) // 0 for left and 1 for right click
             {
 
-                transform.position = new Vector2(curPosition.x, transform.position.y);
+                transform.position = new Vector2(curPosition.x , curPosition.y);
             }
 
 

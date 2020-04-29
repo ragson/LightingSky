@@ -10,6 +10,7 @@ public class FailureScreen : MonoBehaviour
     public GameObject m_playButton;
     public GameObject m_player;
     public Text m_instuctTxt;
+    public Button lvl1, lvl2, lvl3, lvl4, lvl5;
 
     private void OnEnable()
     {
@@ -25,11 +26,14 @@ public class FailureScreen : MonoBehaviour
         score = Globals.m_coinscore + score;
         PlayerPrefs.SetInt("Score", score);
 
-
+      
 
         GameObject.Find("MyScore").GetComponent<Text>().text = "";
         //LevelController
-        GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = false;
+         GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = false;
+
+        
+
 
         GameObject.Find("GameView").transform.position = new Vector3(0, 0, 43);
         if (score < 10)
@@ -66,21 +70,36 @@ public class FailureScreen : MonoBehaviour
         }
 
 
-        if (Globals.m_currentLvl != null)
+        if (Globals.m_commonLvl != null)
         {
-            Globals.m_currentLvl.GetComponent<LevelScript>().Start();
-            GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_1stWaveObjinfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_2ndWaveObjInfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_3rdWaveObjInfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_4thWaveObjInfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_5thWaveObjInfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_5thWaveObjInfo.m_tempObjCnt = 0;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_4thWaveObjInfo.m_tempObjCnt = 0;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_3rdWaveObjInfo.m_tempObjCnt = 0;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_2ndWaveObjInfo.m_tempObjCnt = 0;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_1stWaveObjinfo.m_tempObjCnt = 0;
-        
+           
+            //GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = false;
+
+            DestroyImmediate(GameObject.Find("LevelController").GetComponent<SelectLevelScript>());
+            GameObject.Find("LevelController").AddComponent<SelectLevelScript>();
+
+            lvl1.onClick.AddListener(() => GameObject.Find("LevelController").GetComponent<SelectLevelScript>().Selectlevel(1));
+
+            lvl2.onClick.AddListener(() => GameObject.Find("LevelController").GetComponent<SelectLevelScript>().Selectlevel(2));
+
+            lvl3.onClick.AddListener(() => GameObject.Find("LevelController").GetComponent<SelectLevelScript>().Selectlevel(3));
+
+            lvl4.onClick.AddListener(() => GameObject.Find("LevelController").GetComponent<SelectLevelScript>().Selectlevel(4));
+
+            lvl5.onClick.AddListener(() => GameObject.Find("LevelController").GetComponent<SelectLevelScript>().Selectlevel(5));
+
+            Globals.m_commonLvl.GetComponent<LevelScript>().Start();
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_1stWaveObjinfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_2ndWaveObjInfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_3rdWaveObjInfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_4thWaveObjInfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_5thWaveObjInfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_5thWaveObjInfo.m_tempObjCnt = 0;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_4thWaveObjInfo.m_tempObjCnt = 0;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_3rdWaveObjInfo.m_tempObjCnt = 0;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_2ndWaveObjInfo.m_tempObjCnt = 0;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_1stWaveObjinfo.m_tempObjCnt = 0;
+
         }
         this.gameObject.SetActive(false);
     }
@@ -89,33 +108,37 @@ public class FailureScreen : MonoBehaviour
     public void RestartLevelFromFirst()
     {
         Time.timeScale = 1;
+        
         this.gameObject.SetActive(false);
         m_player.SetActive(true);
         PlayerShooting[] playerShootings = m_player.GetComponentsInChildren<PlayerShooting>();
+
         foreach (PlayerShooting playerShooting in playerShootings)
         {
             playerShooting.Start();
         }
+
         Globals.m_coinscore = 0;
         GameObject.Find("PlayerHealthbar").GetComponent<Slider>().value = 100;
         GameObject.Find("GameView").transform.position = new Vector3(0, 0, 0);
-        if (Globals.m_currentLvl != null)
-        {
+        if (Globals.m_commonLvl != null)
+        {            
+            DestroyImmediate(GameObject.Find("LevelController").GetComponent<SelectLevelScript>());
+            GameObject.Find("LevelController").AddComponent<SelectLevelScript>();
 
-            Globals.m_currentLvl.GetComponent<LevelScript>().Start();
-            
-            GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = true;
-            
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_1stWaveObjinfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_2ndWaveObjInfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_3rdWaveObjInfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_4thWaveObjInfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_5thWaveObjInfo.m_oneTimeInstiate = false;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_5thWaveObjInfo.m_tempObjCnt = 0;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_4thWaveObjInfo.m_tempObjCnt = 0;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_3rdWaveObjInfo.m_tempObjCnt = 0;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_2ndWaveObjInfo.m_tempObjCnt = 0;
-            Globals.m_currentLvl.GetComponent<LevelScript>().m_1stWaveObjinfo.m_tempObjCnt = 0;
+            GameObject.Find("LevelController").GetComponent<SelectLevelScript>().level = Globals.m_currentLvl;
+            //GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = true;
+            Globals.m_commonLvl.GetComponent<LevelScript>().Start();
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_1stWaveObjinfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_2ndWaveObjInfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_3rdWaveObjInfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_4thWaveObjInfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_5thWaveObjInfo.m_oneTimeInstiate = false;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_5thWaveObjInfo.m_tempObjCnt = 0;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_4thWaveObjInfo.m_tempObjCnt = 0;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_3rdWaveObjInfo.m_tempObjCnt = 0;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_2ndWaveObjInfo.m_tempObjCnt = 0;
+            Globals.m_commonLvl.GetComponent<LevelScript>().m_1stWaveObjinfo.m_tempObjCnt = 0;
            
         }
     }
@@ -125,6 +148,7 @@ public class FailureScreen : MonoBehaviour
     {
         Time.timeScale = 1;
        
+        GameObject.Find("LevelController").GetComponent<SelectLevelScript>().enabled = true;
         m_player.SetActive(true);
 
         Globals.m_coinscore = 0;
